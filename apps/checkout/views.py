@@ -2,7 +2,6 @@
 from logging import getLogger
 log = getLogger(__name__)
 
-
 from django.contrib import messages
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.http import Http404, HttpResponseRedirect, HttpResponseBadRequest
@@ -69,7 +68,6 @@ class PaymentMethodView(corePaymentMethodView):
         # Check the validity of method
 
         # Save the choosen method
-
         self.checkout_session.pay_by(SourceType.objects.get(code=method_code))
 
         return self.get_success_response()

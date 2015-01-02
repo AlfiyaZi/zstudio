@@ -346,3 +346,7 @@ INFO 2014-12-28 18:27:06,585 views Order #100012: beginning submission process f
 INFO 2014-12-28 18:27:06,714 views Order #100012: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=1556.00&InvId=12&SignatureValue=6EE44AF49429476C5E427AE74F7CF8DA&Email=alfiya%40gmail.com&Culture=ru
 INFO 2014-12-28 21:35:04,555 views Order #100020: beginning submission process for basket #20
 INFO 2014-12-28 21:35:04,635 views Order #100020: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=600.00&InvId=20&SignatureValue=F4A44E4B31955C2095908100A92FD5C5&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-02 23:06:07,224 views Order #100021: beginning submission process for basket #21
+INFO 2015-01-02 23:06:07,381 views Order #100021: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=558.00&InvId=21&SignatureValue=D014FC54EF1EB2BA012A2459B7E0ABF1&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 01:55:18,789 views Order #100024: beginning submission process for basket #24
+INFO 2015-01-03 01:55:18,923 views Order #100024: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=634.00&InvId=24&SignatureValue=A1A26051DFC97F5AD1DD1E246764A08D&Email=alfiyaZiganshina%40gmail.com&Culture=ru

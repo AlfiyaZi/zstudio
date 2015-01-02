@@ -4,7 +4,6 @@ Django settings for redflower project.
 
 """
 
-
 import os
 import sys
 
@@ -12,9 +11,6 @@ from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from django.utils.translation import ugettext_lazy as _
 from django.core.urlresolvers import reverse_lazy
 
-
-
- 
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -42,7 +38,6 @@ print "OSCAR_MAIN_TEMPLATE_DIR:", OSCAR_MAIN_TEMPLATE_DIR
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '8=_5x8+(*55!^k67=_4na!q=-#m)kx3l7ips6iablj2k&26y32'
 
-
 DEBUG = True
 
 TEMPLATE_DEBUG = True
@@ -53,67 +48,61 @@ from oscar import get_core_apps
 
 INSTALLED_APPS = [
 
-    'django.contrib.auth',
-    'django.contrib.admin',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django.contrib.flatpages',
-    'django.contrib.comments',
-    'debug_toolbar',
-    'treebeard',
-    'template_timings_panel',
-    'south',
-    'compressor',
-    'pagination',
-    'bootstrap_pagination',
-    'widget_tweaks',
+                     'django.contrib.auth',
+                     'django.contrib.admin',
+                     'django.contrib.contenttypes',
+                     'django.contrib.sessions',
+                     'django.contrib.sites',
+                     'django.contrib.messages',
+                     'django.contrib.staticfiles',
+                     'django.contrib.flatpages',
+                     'django.contrib.comments',
+                     'debug_toolbar',
+                     'treebeard',
+                     'template_timings_panel',
+                     'south',
+                     'compressor',
+                     'pagination',
+                     'bootstrap_pagination',
+                     'widget_tweaks',
 
-    'florists',
-    'events',
-    'about',
-    'school',
-     'zinnia_bootstrap',
-
-
-    'pages',
-    'factory',
-    'mcbv',
-
-    'contact',
+                     'florists',
+                     'events',
+                     'about',
+                     'school',
+                     'zinnia_bootstrap',
 
 
-    'mptt',  # utilities for implementing a modified pre-order traversal tree
-    'menus',  # helper for model independent hierarchical website navigation
+                     'pages',
+                     'factory',
+                     'mcbv',
 
-    'sekizai',  # for javascript and css management
-    'djangocms_admin_style',  # for the admin skin. You **must** add 'djangocms_admin_style' in the list before 'django.contrib.admin'.
-    'adminsortable',
-    'sorl.thumbnail',
-    'portfolio',
-
-    'pay',
-    #'zinnia',
-    'tagging',
-   'feincms',
-
-    'feincms.module.page',
-    'feincms.module.medialibrary',
-    'news',
-    'apps.invoice',
-    'robokassa',
-] + get_core_apps([ 'apps.checkout',  'apps.shipping'])
+                     'contact',
 
 
+                     'mptt',  # utilities for implementing a modified pre-order traversal tree
+                     'menus',  # helper for model independent hierarchical website navigation
 
+                     'sekizai',  # for javascript and css management
+                     'djangocms_admin_style',
+                     # for the admin skin. You **must** add 'djangocms_admin_style' in the list before 'django.contrib.admin'.
+                     'adminsortable',
+                     'sorl.thumbnail',
+                     'portfolio',
 
+                     'pay',
+                     #'zinnia',
+                     'tagging',
+                     'feincms',
+
+                     'feincms.module.page',
+                     'feincms.module.medialibrary',
+                     'news',
+                     'apps.invoice',
+                     'robokassa',
+                 ] + get_core_apps(['apps.checkout', 'apps.shipping'])
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.PickleSerializer'
-
-
-
 
 SITE_ID = 1
 
@@ -127,16 +116,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'oscar.apps.basket.middleware.BasketMiddleware',
-    'django.middleware.transaction.TransactionMiddleware',  
+    'django.middleware.transaction.TransactionMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 
 
 )
-
-
-
-    
-
 
 RQ_QUEUES = {
     'default': {
@@ -147,26 +131,14 @@ RQ_QUEUES = {
     },
 }
 
+ROBOKASSA_LOGIN = 'flowerBigCity'
+ROBOKASSA_PASSWORD1 = 'lY7d2Shj28'
 
-
-
-
-
-
-
-
-ROBOKASSA_LOGIN ='flowerBigCity'
-ROBOKASSA_PASSWORD1 ='lY7d2Shj28'
-
-
-ROBOKASSA_PASSWORD2 ='4hc033wFtB'
+ROBOKASSA_PASSWORD2 = '4hc033wFtB'
 ROBOKASSA_USE_POST = True
-ROBOKASSA_STRICT_CHECK= False
+ROBOKASSA_STRICT_CHECK = False
 ROBOKASSA_TEST_MODE = False
 ROBOKASSA_EXTRA_PARAMS = []
-
-
-
 
 ROOT_URLCONF = 'redflower.urls'
 
@@ -212,9 +184,23 @@ CACHES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
+
+
+
+
+
+TIME_ZONE = 'Europe/Moscow'
+
+# Language code for this installation. All choices can be found here:
+# http://www.i18nguy.com/unicode/language-identifiers.html
+#LANGUAGE_CODE = 'ru-RU'
+
+LANGUAGES = (
+    ('ru', 'Russian'),
+)
 LANGUAGE_CODE = 'ru'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
@@ -235,11 +221,8 @@ HAYSTACK_CONNECTIONS = {
     },
 }
 
-
 LOGIN_REDIRECT_URL = '/catalogue/'
 APPEND_SLASH = True
-
-
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -257,8 +240,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.core.context_processors.metadata',
 )
 
-
-
 AUTHENTICATION_BACKENDS = (
     'oscar.apps.customer.auth_backends.Emailbackend',
 
@@ -266,11 +247,11 @@ AUTHENTICATION_BACKENDS = (
 
 )
 
-
 from oscar import OSCAR_MAIN_TEMPLATE_DIR
+
 TEMPLATE_DIRS = (
-     TEMPLATE_PATH,
-     #OSCAR_MAIN_TEMPLATE_DIR,
+    TEMPLATE_PATH,
+    #OSCAR_MAIN_TEMPLATE_DIR,
 )
 
 
@@ -432,7 +413,7 @@ DEBUG_TOOLBAR_PANELS = [
     'debug_toolbar.panels.logging.LoggingPanel',
     'debug_toolbar.panels.redirects.RedirectsPanel',
 ]
-INTERNAL_IPS = ['127.0.0.1', '::1','5.141.232.30',]
+INTERNAL_IPS = ['127.0.0.1', '::1', '5.141.232.30', ]
 
 
 
@@ -483,16 +464,12 @@ if not os.path.exists(LOG_ROOT):
 
 #set encoding=utf-8
 
-# Meta
-# ====
-
 
 from oscar.defaults import *
 
+# Address settings
 
-OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name', 'last_name', 'line1',
-                                 'line4', 'postcode', 'country')
-OSCAR_REQUIRED_ADDRESS_FIELDS += ('phone_number',)
+OSCAR_REQUIRED_ADDRESS_FIELDS = ('')
 OSCAR_SHOP_NAME = u'Студия флористики Елены Захаровой'
 OSCAR_SHOP_TAGLINE = u'доставка букетов'
 OSCAR_DEFAULT_CURRENCY = u'руб.'
@@ -501,7 +478,7 @@ OSCAR_CURRENCY_FORMAT = u'#,##0.00 ¤'
 
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
-OSCAR_ALLOW_ANON_REVIEWS = False
+OSCAR_ALLOW_ANON_REVIEWS = True
 OSCAR_MODERATE_REVIEWS = True
 # Registration
 OSCAR_SEND_REGISTRATION_EMAIL = True

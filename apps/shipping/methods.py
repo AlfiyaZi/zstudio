@@ -29,10 +29,10 @@ class Express(Base):
 
 class RusPost(Base):
     code = 'russian-post'
-    name = u"Доставка"
+    name = u"Почта России"
     is_tax_known = True
-    defaultCharge = D(200)
-
+    defaultCharge = D(300)
+    
 
     def set_shipping_addr(self, shipping_addr):
         self.set_postcode(shipping_addr)
@@ -71,11 +71,11 @@ class RusPost(Base):
             tarifRequest['To'] = self.postcode
         log.debug("tarifRequest is %s", tarifRequest)
         try:
-            charge = tarifcalc.calc(tarifRequest, tarifConfig)()
+            charge = tarifcalc.calc(tarifRequest, tarifConfig)() 
         except tarifcalc.BadTarifRequest as e:
             log.warning("Error getting RusPost charge: %s", e)
             return self.defaultCharge
-        log.debug("completed: charge = %s", charge)
+        log.debug("completed: charge = %s", charge) 
         return charge if charge else self.defaultCharge
 
     @property

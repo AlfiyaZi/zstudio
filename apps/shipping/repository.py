@@ -12,7 +12,11 @@ class Repository(repository.Repository):
 
         if shipping_addr is not None:
             city = shipping_addr.line4
-            shipping_addr.line4= u"Пермь"
+
+            shipping_addr.line4=u"Пермь"
+            shipping_addr.postcode='614051'
+            shipping_addr.Country='RU'
+            shipping_addr.Country_code='RU'
             if city not in (u"Пермь", u"Perm"):
                 self.methods = (self.methods[0], self.methods[1])
         methods = super(Repository, self).get_shipping_methods(
@@ -21,5 +25,3 @@ class Repository(repository.Repository):
             if hasattr(m, 'set_shipping_addr'):
                 m.set_shipping_addr(shipping_addr)
         return methods
-
-

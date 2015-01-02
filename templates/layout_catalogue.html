@@ -1,0 +1,202 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+{% block layout %}
+
+  <div class="wrapper">
+
+			<!-- Header Start -->
+
+			<div class="header">
+				<div class="container">
+					<!-- Header top area content -->
+					<div class="header-top">
+
+                    <div class="row">
+
+                      <div class="col-md-4 col-sm-4">
+                             	<!-- Link -->
+
+
+
+
+                          <div class="header-contact">
+									<!-- Contact number -->
+
+
+								<!--	<span> <i class="fa fa-phone red"></i>+7(342)212-75-99</span>-->
+			 					 </div>
+
+
+					       </div>
+                       <div class="col-md-4 col-sm-4">
+                  	<!-- Link -->
+
+                        </div>
+                     <div class="col-md-4 col-sm-4">
+                          {% include "partials/nav_accounts.html" %}
+                         <div class="clearfix"></div>
+
+               {% include "partials/search.html" %}
+
+
+
+						</div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+
+
+       <div class="row">
+						<div class="col-md-12 col-sm-12>
+							<!-- Link -->
+							<a href="/">
+								<!-- Logo area -->
+								<div class="logo">
+									<img class="img-responsive" src="{% static "flowers/img/permlogo.png" %}">
+
+								</div>
+							</a>
+
+
+
+
+
+							  <nav class="navbar navbar-default " role="navigation">
+								<div class="container-fluid">
+									<!-- Brand and toggle get grouped for better mobile display -->
+									<div class="navbar-header">
+										<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+											<span class="sr-only">Toggle navigation</span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+											<span class="icon-bar"></span>
+										</button>
+									</div>
+
+									<!-- Collect the nav links, forms, and other content for toggling -->
+									<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+										<ul class="nav navbar-nav ">
+                                             <li> <a href="/"><i class="fa fa-home fa-lg"></i></a></li>
+                                            <li> <a href="/catalogue/">Каталог</a></li>
+
+                                         <li> <a href="/portfolio/">Услуги</a></li>
+                                            	<li> <a href="/blog/">Новости</a></li>
+										<li> <a href="gallery.html">Школа </a></li>
+											<li> <a href="gallery.html">Мероприятия</a></li>
+
+
+
+
+											<li><a href="/florists/"> Флористы</a></li>
+
+
+
+
+
+
+                                        </ul>
+
+
+
+
+
+									</div><!-- /.navbar-collapse -->
+								</div><!-- /.container-fluid -->
+							</nav>
+
+						</div>
+
+
+					</div> <!-- end row-->
+
+
+
+
+				</div> <!-- / .container -->
+			</div>
+			<!-- Header End -->
+
+{% block content_wrapper %}
+
+<!-- Inner Content -->
+<div class="inner-page ">
+	<!-- Shopping Start -->
+
+	<div class="shopping">
+		<div class="container">
+
+
+			<div class="row  padd">
+
+
+
+
+   {% include "partials/nav_primary_pills.html" %}
+
+                </div>
+<!-- end navigation -->
+  <div class="page_inner">
+
+  {% block breadcrumbs %}{% endblock %}
+       {% block header %}
+
+
+                       {% block headertext %}{% endblock %}
+
+                {% endblock %}
+
+                {% block subnavigation %}{% endblock %}
+                <div class="content">
+                    {% block subheader %}{% endblock subheader %}
+
+                    {# Render promotions #}
+                    <div id="promotions">
+                        {% for promotion in promotions_page %}
+                            {% render_promotion promotion %}
+                        {% endfor %}
+                    </div>
+
+<!-- start portfolio -->
+
+      {# Div exists for AJAX updates to entire content section #}
+       {% block content %}{% endblock %}
+<!-- end portfolio -->
+
+
+
+      <!--end row-->
+
+                   </div>
+
+</div>
+				</div><!--end  container-->
+              </div>
+
+</div>
+
+ {% endblock %}
+
+<!-- Footer Start -->
+
+
+{% include "partials/footer.html" %}
+
+	<!-- Footer End -->
+
+
+		 </div><!-- / Wrapper End -->
+		<!-- Scroll to top -->
+		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
+
+{% endblock %}

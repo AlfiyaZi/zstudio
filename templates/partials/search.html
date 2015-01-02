@@ -1,0 +1,21 @@
+{% load url from future %}
+{% load i18n %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+
+
+ <div class=" header-search pull-right hidden-sm hidden-xs">
+				<form method="get" action="{% url 'search:search' %}" class="form" role="form">
+							<div class="input-group">
+
+
+							  {{ search_form.q | add_class:"form-control"}}
+
+								  <span class="input-group-btn">
+											<button class="btn btn-default" type="submit" value="{% trans "Search" %}"><i class="fa fa-search"></i></button>
+								  </span>
+							</div>
+				</form>
+ </div>
+

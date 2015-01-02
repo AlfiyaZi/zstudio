@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% load staticfiles %}
+
+
+ {% block content %}
+
+<!-- Booking Start -->
+
+				<div class="booking">
+					<div class="container">
+						<div class="row">
+
+							<div class="col-md-5 col-sm-4">
+								<!-- Booking form area -->
+								<div class="booking-form">
+									<!-- Heading -->
+									<h3>Экспресс заказ</h3>
+									<!-- Paragraph -->
+									<p>Заполните форму с контактными данными.<br/>
+                                        Наш менеджер перезвонит вам в течении нескольких минут</p>
+									<!-- Booking form -->
+									<form  method="post" action="/contact/add_contact/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            <p>
+            {{ field.help_text }}</p>
+            {{ field |add_class:"form-control"  }}<br/>
+            {% endfor %}
+
+            <br/>
+            <input class="btn btn-primary" type="submit" name="submit" value="Заказать"/>
+
+        </form>
+								</div>
+                            </div>
+
+                                <div class="col-md-7 col-sm-4">
+                                      <br/>
+                                    <br/>
+
+
+								<!-- Paragraph -->
+								<p></p>
+                                    <div id="carousel-example-generic" class="carousel slide" >
+                                    	<img class="img-responsive" src="{% static "flowers/img/02.jpg" %}" alt="Цветы большого города" />
+                                    </div>
+
+
+							</div>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Booking End -->
+
+
+
+
+
+
+
+{% endblock %}

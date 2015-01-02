@@ -1,0 +1,88 @@
+
+
+{% load reviews_tags %}
+{% load thumbnail %}
+{% load category_tags %}
+{% load i18n %}
+{% load display_tags %}
+{% load staticfiles %}
+
+{% block product %}
+
+
+
+
+
+       <div class="item-box fixed-box">
+
+           {% block product_image %}
+								<figure>
+									<a class="item-hover" href="{{ product.get_absolute_url }}" >
+										<!--<span class="overlay color2"></span>-->
+
+										<span class="inner">
+                                         <!-- <p class="hidden-sm hidden-xs">{{product.description|striptags}}</p>-->
+
+
+
+
+										</span>
+
+									</a>
+                                    <!--							<a class="btn btn-primary add_to_cart"><i class="fa fa-shopping-cart"></i> В КОРЗИНУ</a>-->
+                                    {% if not product.is_group %}
+                                       {% include "catalogue/partials/add_to_basket_form_compact.html" %}
+                                     {% endif %}
+
+                                       {% with image=product.primary_image %}
+                                {% thumbnail image.original  "280x280" crop="center" as thumb %}
+                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}" class="img-thumbnail" width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
+                                    {% endthumbnail %}
+
+                                {% endwith %}
+
+
+
+
+
+
+								</figure>
+								<div class="item-box-desc hidden-sm hidden-xs">
+                                     {% block product_title %}
+                                         <h4>{{ product.get_title|truncatewords:4 }}</h4>
+                                     {% endblock %}
+
+
+
+                   <!--<a href="/contact/add_contact/" class="btn btn-danger  e_bounceIn ">Обратный звонок</a>-->
+
+
+
+
+                                            {% block product_price %}
+                                             <small class="styleColor">
+                                             <span> </span><div class="product_price ">
+                                            {% include "catalogue/partials/stock_record.html" %}
+                                             </div></small>
+                                           {% endblock %}
+
+								 </div>
+
+
+           <!--<div class="item-box-desc">
+									<h4>Cool Chair</h4>
+									<small class="styleColor"><span>$180</span> $150</small>
+								</div>-->
+
+
+ {% endblock %}
+
+	   </div>
+
+     {% endblock %}
+
+
+
+
+
+

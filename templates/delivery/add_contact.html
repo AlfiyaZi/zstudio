@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% load staticfiles %}
+
+
+ {% block content %}
+
+<!-- Booking Start -->
+
+
+
+
+
+		<form  method="post" action="/delivery/add_address/">
+
+            {% csrf_token %}
+            {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            <p>
+            {{ field.help_text }}</p>
+            {{ field |add_class:"form-control"  }}<br/>
+            {% endfor %}
+
+            <br/>
+            <input class="btn btn-danger" type="submit" name="submit" value="Заказать"/>
+
+        </form>
+
+
+
+
+
+
+
+
+
+{% endblock %}

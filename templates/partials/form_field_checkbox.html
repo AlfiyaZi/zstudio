@@ -1,0 +1,12 @@
+{% extends "partials/form_field.html" %}
+
+{% block label %}{% endblock %}
+
+{% block widget %}
+    <div class="checkbox">
+    <label >
+        {{ field.label|safe }}{% if field.field.required %} <span>*</span>{% endif %}
+        {{ field }}
+    </label>
+    </div>
+{% endblock %}

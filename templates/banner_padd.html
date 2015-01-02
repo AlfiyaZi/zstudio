@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+<div class="banner padd">
+				<div class="container">
+					<!-- Image -->
+
+					<!-- Heading -->
+                    <h2 class="white">{% block headertext %}{% endblock %}</h2>
+
+					{% block breadcrumbs %}{% endblock %}
+
+
+
+					<div class="clearfix"></div>
+				</div>
+			</div>

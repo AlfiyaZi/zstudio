@@ -1,0 +1,41 @@
+{% extends "layout_catalogue.html" %}
+
+{% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+
+{% block title %}
+{% trans "Offers" %} | {{ block.super }}
+{% endblock %}
+
+
+
+
+
+{% block content %}
+        <div id="shop1">
+    {% if not offers %}
+        <p>{% trans "There are no site offers at the moment." %}</p>
+    {% else %}
+        {% for offer in offers %}
+        <h4 style="text-align: center; text-transform: uppercase;">{{ offer.name }}</h4>
+        {% if offer.description %}
+            <p>{{ offer.description|safe }}</p>
+        {% endif %}
+        {% if offer.has_products %}
+            <ul class="row"  style="list-style: none;">
+                {% for product in offer.products|slice:":12" %}
+                <li class="col-md-2  col-sm-3 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
+                {% endfor %}
+            </ul>
+        <br/>
+            <p style="text-align: center;">
+                <a class="btn btn-default" href="{% url 'offer:detail' slug=offer.slug %}">{% trans "Browse products in offer" %}</a>
+            </p>
+        <br/>
+        {% endif %}
+
+        {% endfor %}
+    {% endif %}</div>
+{% endblock content %}

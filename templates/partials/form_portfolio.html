@@ -1,0 +1,82 @@
+{% load url from future %}
+{% load currency_filters %}
+{% load category_tags %}
+{% load i18n %}
+
+
+ {% category_tree as tree_categories %}
+
+ <form class="content container " >
+
+
+    <a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a>
+
+       <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                            {% if tree_categories %}
+                                <li class="divider"></li>
+                                {% for tree_category, info in tree_categories %}
+                                    {% if info.has_children %}
+                                        <li class="dropdown-submenu">
+                                            <a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                            <ul class="dropdown-menu">
+                                            {% else %}
+                                                <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                                            {% endif %}
+
+                                            {% for close in info.num_to_close %}
+                                                </ul></li>
+                                            {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+                            <li class="divider"></li>
+                            {% block nav_dropdown_extra_items %}
+                                <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                            {% endblock %}
+                        </ul>
+                    </li>
+
+
+<!-- start navigation -->
+<input class="nav-menu" id="all" type="radio" name="filter" checked="checked"/>
+<label for="all">Все</label>
+
+<input class="nav-menu" id="buckets" type="radio" name="filter"/>
+<label for="buckets">Букеты</label>
+
+<input class="nav-menu" id="compositions" type="radio" name="filter"/>
+<label for="compositions">Композиции</label>
+
+<input class="nav-menu" id="baskets" type="radio" name="filter"/>
+<label for="baskets">Корзины</label>
+
+<input class="nav-menu" id="potted" type="radio" name="filter"/>
+<label for="potted">Горшечные растения</label>
+
+
+<input class="nav-menu" id="cards" type="radio" name="filter"/>
+<label for="cards">Открытки</label>
+
+<input class="nav-menu" id="jwels" type="radio" name="filter"/>
+<label for="jwels">Украшения </label>
+
+<input class="nav-menu" id="packaging" type="radio" name="filter"/>
+<label for="packaging">Картины</label>
+<input class="nav-menu" id="svadbas" type="radio" name="filter"/>
+<label for="svadbas">Свадьба</label>
+
+<input class="nav-menu" id="seasons" type="radio" name="filter"/>
+<label for="seasons">Сезонные предложения</label>
+
+<input class="nav-menu" id="packaging" type="radio" name="filter"/>
+<label for="packaging">Новинки</label>
+
+
+<!-- end navigation -->
+
+
+<!-- start portfolio -->
+
+
+
+<!-- end portfolio -->
+</form>

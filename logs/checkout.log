@@ -1,0 +1,348 @@
+INFO 2014-06-02 03:07:55,940 views Order #100001: beginning submission process for basket #1
+INFO 2014-06-02 03:07:55,951 views Order #100001: payment successful, placing order
+INFO 2014-06-02 03:07:56,684 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-06-02 03:07:56,694 utils Sending email to alfiya79@gmail.com
+INFO 2014-06-03 17:58:57,042 views Order #100001: beginning submission process for basket #1
+INFO 2014-06-03 17:58:57,078 views Order #100001: payment successful, placing order
+INFO 2014-06-03 17:58:57,865 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-06-03 17:58:57,875 utils Sending email to alfiya79@gmail.com
+INFO 2014-06-11 19:09:24,775 views Order #100004: beginning submission process for basket #4
+INFO 2014-06-11 19:09:24,795 views Order #100004: payment successful, placing order
+INFO 2014-06-11 19:09:25,276 mixins Order #100004 - sending ORDER_PLACED messages
+INFO 2014-06-11 19:09:25,276 utils Sending email to silvera@mail.ru
+INFO 2014-06-12 12:20:53,765 views Order #100001: beginning submission process for basket #1
+INFO 2014-06-12 12:20:53,819 views Order #100001: payment successful, placing order
+INFO 2014-06-12 12:20:54,450 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-06-12 12:20:54,461 utils Sending email to alfiya79@gmail.com
+INFO 2014-06-15 20:15:10,499 views Order #100001: beginning submission process for basket #1
+INFO 2014-06-15 20:15:10,535 views Order #100001: payment successful, placing order
+INFO 2014-06-15 20:15:11,088 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-06-15 20:15:11,098 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 11:44:23,813 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 11:44:23,877 views Order #100001: payment successful, placing order
+INFO 2014-08-31 11:44:24,642 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 11:44:24,654 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 16:50:05,032 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 16:50:05,045 views Order #100001: payment successful, placing order
+INFO 2014-08-31 16:50:05,582 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 16:50:05,592 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 17:02:00,558 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 17:02:00,569 views Order #100001: payment successful, placing order
+INFO 2014-08-31 17:02:01,040 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 17:02:01,051 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 17:30:30,385 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 17:30:30,404 views Order #100001: payment successful, placing order
+INFO 2014-08-31 17:30:30,887 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 17:30:30,898 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 20:08:05,905 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 20:08:05,915 views Order #100001: payment successful, placing order
+INFO 2014-08-31 20:08:06,476 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 20:08:06,510 utils Sending email to alfiya79@gmail.com
+INFO 2014-08-31 20:08:28,194 views Order #100001: beginning submission process for basket #1
+INFO 2014-08-31 20:08:28,204 views Order #100001: payment successful, placing order
+INFO 2014-08-31 20:08:28,713 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-08-31 20:08:28,723 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:04:41,358 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:04:41,380 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:04:41,989 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:04:41,999 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:13:38,138 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-01 04:13:38,151 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 27, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-01 04:13:53,691 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-01 04:13:53,701 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 27, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-01 04:14:29,823 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-01 04:14:29,835 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 27, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-01 04:16:29,946 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-01 04:16:29,961 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 27, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-01 04:32:58,367 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:32:58,378 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:32:58,838 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:32:58,849 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:33:11,401 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:33:11,413 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:33:11,983 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:33:11,993 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:51:23,421 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:51:23,431 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:51:23,937 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:51:23,947 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:51:34,628 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:51:34,638 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:51:35,121 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:51:35,132 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 04:53:09,392 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 04:53:09,404 views Order #100001: payment successful, placing order
+INFO 2014-09-01 04:53:09,920 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 04:53:09,928 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 05:18:38,846 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 05:18:38,858 views Order #100001: payment successful, placing order
+INFO 2014-09-01 05:18:39,575 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 05:18:39,595 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 05:22:34,013 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 05:22:34,025 views Order #100001: payment successful, placing order
+INFO 2014-09-01 05:22:34,700 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 05:22:34,710 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-01 05:31:40,996 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-01 05:31:41,007 views Order #100001: payment successful, placing order
+INFO 2014-09-01 05:31:41,575 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-01 05:31:41,585 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 02:50:22,028 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 02:50:22,295 views Order #100001: payment successful, placing order
+INFO 2014-09-03 02:50:23,477 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 02:50:23,489 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 02:51:31,174 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 02:51:31,279 views Order #100001: payment successful, placing order
+INFO 2014-09-03 02:51:32,003 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 02:51:32,013 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 03:08:24,765 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-03 03:08:24,779 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 46, in handle_payment
+    pay_with_robokassa(request, order_id)
+NameError: global name 'request' is not defined
+INFO 2014-09-03 03:08:31,793 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-03 03:08:31,803 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 46, in handle_payment
+    pay_with_robokassa(request, order_id)
+NameError: global name 'request' is not defined
+INFO 2014-09-03 03:08:43,107 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-03 03:08:43,118 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 46, in handle_payment
+    pay_with_robokassa(request, order_id)
+NameError: global name 'request' is not defined
+INFO 2014-09-03 03:11:03,598 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 03:11:03,703 views Order #100001: payment successful, placing order
+INFO 2014-09-03 03:11:04,726 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 03:11:04,740 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 03:28:03,637 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 03:28:03,736 views Order #100001: payment successful, placing order
+INFO 2014-09-03 03:28:04,483 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 03:28:04,500 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 03:32:51,426 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 03:32:51,528 views Order #100001: payment successful, placing order
+INFO 2014-09-03 03:32:52,234 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 03:32:52,246 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 03:33:56,088 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 03:33:56,191 views Order #100001: payment successful, placing order
+INFO 2014-09-03 03:33:56,920 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 03:33:56,931 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 03:57:29,059 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 03:57:29,178 views Order #100001: payment successful, placing order
+INFO 2014-09-03 03:57:29,865 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 03:57:29,875 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 04:09:46,055 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 04:09:46,190 views Order #100001: payment successful, placing order
+INFO 2014-09-03 04:09:46,864 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 04:09:46,874 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 05:06:23,740 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 05:06:23,842 views Order #100001: payment successful, placing order
+INFO 2014-09-03 05:06:24,546 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 05:06:24,559 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 05:08:08,125 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 05:08:08,282 views Order #100001: payment successful, placing order
+INFO 2014-09-03 05:08:08,971 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 05:08:08,982 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 05:22:01,336 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 05:22:01,470 views Order #100001: payment successful, placing order
+INFO 2014-09-03 05:22:02,200 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 05:22:02,211 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 13:03:15,444 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 13:03:15,556 views Order #100001: payment successful, placing order
+INFO 2014-09-03 13:03:16,621 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 13:03:16,634 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 14:44:42,938 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 14:44:43,078 views Order #100001: payment successful, placing order
+INFO 2014-09-03 14:44:44,141 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 14:44:44,157 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 16:17:14,045 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 16:17:14,183 views Order #100001: payment successful, placing order
+INFO 2014-09-03 16:17:14,979 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 16:17:14,992 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 16:41:01,740 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 16:41:01,838 views Order #100001: payment successful, placing order
+INFO 2014-09-03 16:41:02,529 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 16:41:02,539 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-03 18:07:52,318 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-03 18:07:52,421 views Order #100001: payment successful, placing order
+INFO 2014-09-03 18:07:53,101 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-03 18:07:53,111 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 14:00:14,559 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 14:00:14,736 views Order #100001: payment successful, placing order
+INFO 2014-09-04 14:00:15,378 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 14:00:15,410 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 20:23:56,220 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 20:23:56,358 views Order #100001: payment successful, placing order
+INFO 2014-09-04 20:23:57,164 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 20:23:57,174 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 21:53:07,285 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 21:53:07,384 views Order #100001: payment successful, placing order
+INFO 2014-09-04 21:53:08,177 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 21:53:08,190 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-04 23:22:29,311 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-04 23:22:29,417 views Order #100001: payment successful, placing order
+INFO 2014-09-04 23:22:30,122 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-04 23:22:30,132 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-05 13:58:58,339 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-05 13:58:58,477 views Order #100001: payment successful, placing order
+INFO 2014-09-05 13:58:59,673 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-05 13:58:59,684 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-06 18:01:26,948 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 18:01:27,012 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 34, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 18:01:34,512 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 18:01:34,523 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 34, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 20:21:46,200 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 20:21:46,292 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 18, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 20:22:25,226 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 20:22:25,236 views Order #100001: unhandled exception while taking payment (global name 'gateway' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 18, in handle_payment
+    reference = gateway.pre_auth(order_number, total.incl_tax, kwargs['bankcard'])
+NameError: global name 'gateway' is not defined
+INFO 2014-09-06 21:29:14,404 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:29:14,420 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 19, in handle_payment
+    robokassa_ref=facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-06 21:42:55,036 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:42:55,046 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 177, in handle_payment
+    facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-06 21:48:17,447 views Order #100001: beginning submission process for basket #1
+ERROR 2014-09-06 21:48:17,457 views Order #100001: unhandled exception while taking payment (global name 'request' is not defined)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 177, in handle_payment
+    facade.robokassa_redirect(request, basket_num, amount, **kwargs)
+NameError: global name 'request' is not defined
+INFO 2014-09-07 01:02:29,881 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:02:29,894 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:02:30,723 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:02:30,733 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 01:32:17,408 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:32:17,421 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:32:18,062 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:32:18,072 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 01:44:09,625 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 01:44:09,638 views Order #100001: payment successful, placing order
+INFO 2014-09-07 01:44:10,273 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 01:44:10,283 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-07 12:45:43,059 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-07 12:45:43,134 views Order #100001: payment successful, placing order
+INFO 2014-09-07 12:45:44,328 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-07 12:45:44,401 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 00:39:17,335 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 00:39:17,351 views Order #100001: payment successful, placing order
+INFO 2014-09-08 00:39:18,398 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 00:39:18,410 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 00:47:37,426 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 00:47:37,437 views Order #100001: payment successful, placing order
+INFO 2014-09-08 00:47:38,013 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 00:47:38,022 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-08 11:30:50,033 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-08 11:30:50,062 views Order #100001: payment successful, placing order
+INFO 2014-09-08 11:30:51,053 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-08 11:30:51,062 utils Sending email to alfiya79@gmail.com
+INFO 2014-09-18 15:51:39,802 views Order #100001: beginning submission process for basket #1
+INFO 2014-09-18 15:51:39,930 views Order #100001: payment successful, placing order
+INFO 2014-09-18 15:51:40,792 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-09-18 15:51:40,851 utils Sending email to alfiya79@gmail.com
+INFO 2014-11-29 16:46:33,997 views Order #100005: beginning submission process for basket #5
+INFO 2014-11-29 16:46:34,073 views Order #100005: payment successful, placing order
+INFO 2014-11-29 16:46:34,585 mixins Order #100005 - sending ORDER_PLACED messages
+INFO 2014-11-29 16:46:34,585 utils Sending email to alfiyaZiganshina@gmail.com
+INFO 2014-12-07 23:45:22,165 views Order #100001: beginning submission process for basket #1
+INFO 2014-12-07 23:45:22,267 views Order #100001: payment successful, placing order
+INFO 2014-12-07 23:45:22,892 mixins Order #100001 - sending ORDER_PLACED messages
+INFO 2014-12-07 23:45:22,905 utils Sending email to alfiya79@gmail.com
+INFO 2014-12-09 00:23:26,667 views Order #100002: beginning submission process for basket #2
+INFO 2014-12-09 00:23:26,798 views Order #100002: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=1200.00&InvId=2&SignatureValue=9363A6C15975A41693040C3E8B6F9C92&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-09 00:34:14,035 views Order #100003: beginning submission process for basket #3
+INFO 2014-12-09 00:34:14,072 views Order #100003: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=750.00&InvId=3&SignatureValue=A6FC786980637653E3330DEF89CAF8F0&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-09 09:36:27,990 views Order #100004: beginning submission process for basket #4
+INFO 2014-12-09 09:36:28,121 views Order #100004: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=750.00&InvId=4&SignatureValue=701BE91B4C59D454B8CA2547D83287D4&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-09 09:47:18,407 views Order #100001: beginning submission process for basket #1
+INFO 2014-12-09 09:47:18,444 views Order #100001: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=810.00&InvId=1&SignatureValue=11E2093D7AA9D6BC52412BDFCEA35C89&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-09 15:24:43,168 views Order #100005: beginning submission process for basket #5
+INFO 2014-12-09 15:24:43,263 views Order #100005: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=210.00&InvId=5&SignatureValue=70CF36F1AF1D4D571547621DCBE780D3&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-09 15:26:38,568 views Order #100008: beginning submission process for basket #8
+INFO 2014-12-09 15:26:38,602 views Order #100008: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=10.00&InvId=8&SignatureValue=D5B771885C9AAD348A06DCA5D4673FBD&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-10 13:31:50,125 views Order #100007: beginning submission process for basket #7
+INFO 2014-12-10 13:31:50,311 views Order #100007: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=220.00&InvId=7&SignatureValue=901DAED72B2C415F141E56380FA25356&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-10 13:35:00,934 views Order #100009: beginning submission process for basket #9
+INFO 2014-12-10 13:35:00,967 views Order #100009: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=10.00&InvId=9&SignatureValue=F879B786D64413FCC6AC00EB9BBA0EA4&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-10 16:42:38,538 views Order #100011: beginning submission process for basket #11
+INFO 2014-12-10 16:42:38,578 views Order #100011: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=3400.00&InvId=11&SignatureValue=EED18594D7DA0D9C8B5DCB8A9033517A&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-10 17:56:38,569 views Order #100010: beginning submission process for basket #10
+INFO 2014-12-10 17:56:38,611 views Order #100010: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=230.00&InvId=10&SignatureValue=CD1FF745A2F3EEAB9AE33238205B5101&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-22 22:13:06,838 views Order #100016: beginning submission process for basket #16
+INFO 2014-12-22 22:13:07,022 views Order #100016: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=16&SignatureValue=09F631622E14FE6D8E46C7CA6F9EDDC6&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-23 08:58:44,917 views Order #100017: beginning submission process for basket #17
+INFO 2014-12-23 08:58:44,966 views Order #100017: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=17&SignatureValue=48AB9052CDB92B9500F7DF9055C5DA4F&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-23 14:55:03,492 views Order #100018: beginning submission process for basket #18
+INFO 2014-12-23 14:55:03,578 views Order #100018: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=456.00&InvId=18&SignatureValue=10B9672AE529329EA3B9627D1FB8BECF&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-23 15:14:18,203 views Order #100019: beginning submission process for basket #19
+INFO 2014-12-23 15:14:18,267 views Order #100019: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=456.00&InvId=19&SignatureValue=AC64E6D29D0DA738F0F7BDEA62795B9D&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2014-12-28 18:27:06,585 views Order #100012: beginning submission process for basket #12
+INFO 2014-12-28 18:27:06,714 views Order #100012: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=1556.00&InvId=12&SignatureValue=6EE44AF49429476C5E427AE74F7CF8DA&Email=alfiya%40gmail.com&Culture=ru
+INFO 2014-12-28 21:35:04,555 views Order #100020: beginning submission process for basket #20
+INFO 2014-12-28 21:35:04,635 views Order #100020: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=600.00&InvId=20&SignatureValue=F4A44E4B31955C2095908100A92FD5C5&Email=alfiya%40gmail.com&Culture=ru

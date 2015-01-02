@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+{% block layout %}
+
+  <div class="wrapper">
+
+			<!-- Header Start -->
+
+			<div class="header">
+				<div class="container">
+					<!-- Header top area content -->
+					<div class="header-top">
+
+                      <div class="row">
+
+                                  <div class="col-md-4 col-sm-4">
+
+                             	  </div>
+                                  <div class="col-md-4 col-sm-4">
+
+                                      <div class="phone">
+                                           <ul style="list-style:none;">
+                                                <li><span> <i class="fa fa-phone red"></i> +7(982)418-68-62 </span></li>
+                                                <li><span> <i class="fa fa-phone red"></i> +7(982)457-12-57</span></li>
+                                            </ul>
+
+					                  </div>
+                                  </div>
+
+
+
+                                  <div class="col-md-4 col-sm-4">
+                                      {% include "partials/nav_accounts.html" %}
+                                       <div class="clearfix"></div>
+
+                                     {% include "partials/search.html" %}
+
+						          </div>
+                      </div>
+
+
+
+
+       <div class="row">
+						<div class="col-md-4 col-sm-5">
+							<!-- Link -->
+							<a href="/">
+								<!-- Logo area -->
+								<div class="logo">
+								<!--<img class="img-responsive" src="{% static "flowers/img/logogreen.png" %}">-->
+                                    <img class="img-responsive" src="{% static "flowers/img/z2.png" %}">
+						</div>
+							</a>
+						</div>
+
+						<div class="col-md-8 col-sm-7 hidden-sm">
+
+
+                          <ul class="nav nav-pills  ">
+                                         <li> <a href="/portfolio/"> Портфолио</a></li>
+                                         <li> <a href="/blog/">Новости</a></li>
+									     <li> <a href="gallery.html">Школа </a></li>
+										 <li><a href="/florists/"> Флористы</a></li>
+                           </ul>
+
+
+
+                          </div>
+
+
+                      </div> <!-- end row-->
+
+
+
+						</div>
+
+
+
+
+
+  </div>
+
+				</div> <!-- / .container -->
+			</div>
+			<!-- Header End -->
+
+{% block content_wrapper %}
+
+
+<!-- Inner Content -->
+
+	<!-- Shopping Start -->
+
+	<div class="shopping">
+
+
+
+<div class="container">
+
+ {% include "partials/nav_primary_pills.html" %}
+
+<!-- end navigation -->
+  <div class="page_inner">
+
+     {% block breadcrumbs %}{% endblock %}
+                {% block header %}
+                    <div class="page-header action">
+                        <h4>{% block headertext %}{% endblock %}</h4>
+                    </div>
+                {% endblock %}
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+                <div class="content">
+                    {% block subheader %}{% endblock subheader %}
+
+                    {# Render promotions #}
+                    <div id="promotions">
+                        {% for promotion in promotions_page %}
+                            {% render_promotion promotion %}
+                        {% endfor %}
+                    </div>
+
+<!-- start portfolio -->
+
+      {# Div exists for AJAX updates to entire content section #}
+       {% block content %}{% endblock %}
+<!-- end portfolio -->
+
+
+
+      <!--end row-->
+
+                   </div>
+
+</div>
+				</div><!--end  container-->
+              </div>
+
+			<!-- /Inner page pad -->
+
+
+ {% endblock %}
+
+<!-- Footer Start -->
+
+
+{% include "partials/footer.html" %}
+
+	<!-- Footer End -->
+
+
+		 </div> <!-- / Wrapper End -->
+		<!-- Scroll to top -->
+		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
+
+{% endblock %}

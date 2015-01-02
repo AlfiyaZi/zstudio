@@ -1,0 +1,59 @@
+{% load url from future %}
+{% load currency_filters %}
+{% load category_tags %}
+{% load i18n %}
+
+
+<ul class="nav nav-pills  ">
+
+
+       {% category_tree depth=2 as tree_categories %}
+
+                            {% if tree_categories %}
+                                <li class="divider"></li>
+       <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
+                                {% for tree_category, info in tree_categories %}
+                                    {% if info.has_children %}
+                                        <li class="dropdown-submenu">
+                                            <a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a>
+                                            <ul class="dropdown-menu fadeInDown animated">
+
+                                            {% else %}
+                                                <li><a tabindex="-1" href="{{ tree_category.get_absolute_url }}">{{ tree_category.name }}</a></li>
+                                            {% endif %}
+
+                                            {% for close in info.num_to_close %}
+                                                </ul></li>
+                                            {% endfor %}
+                                {% endfor %}
+                            {% endif %}
+    <li style="float:right; color:red;"><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
+                            <li class="divider"></li>
+                            {% block nav_dropdown_extra_items %}
+
+                            {% endblock %}
+                        </ul>
+
+
+                <!-- {% block header %}
+                    <div class="page-header">
+                        <h1>{% block headertext %}{% endblock %}</h1>
+                    </div>
+                {% endblock %}
+                {% include "partials/alert_messages.html" %}
+                {% block subnavigation %}{% endblock %}
+
+                    {% block subheader %}{% endblock subheader %}-->
+
+
+
+</ul>
+
+
+
+
+
+
+
+
+

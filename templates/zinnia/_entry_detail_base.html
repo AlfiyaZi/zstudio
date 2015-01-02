@@ -1,0 +1,144 @@
+{% load comments i18n %}
+{% load thumbnail %}
+<article id="entry-{{ object.pk }}" class="hentry{% if object.featured %} featured{% endif %}">
+  {% block entry-header %}
+  <header class="entry-header page-header">
+    {% block entry-title %}
+    <h2 class="entry-title">
+      <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="bookmark">
+        {{ object.title }}
+      </a>
+    {% endblock entry-title %}
+    {% block entry-info %}
+      <br />
+      <small class="entry-info">
+        {% block entry-authors %}
+        {% with authors=object.authors.all %}
+        {% if authors|length %}
+        {% trans "Written by" %}
+        {% for author in authors %}
+        <span class="vcard author">
+          <a href="{{ author.get_absolute_url }}" class="fn url{% if not author.get_full_name %} nickname{% endif %}" rel="author"
+             title="{% blocktrans %}Show all {{ author }}'s entries{% endblocktrans %}">{{ author }}</a></span>{% if not forloop.last %}, {% endif %}
+        {% endfor %}
+        {% trans "on" %}
+        {% else %}
+        {% trans "Written on" %}
+        {% endif %}
+        {% endwith %}
+        {% endblock entry-authors %}
+        {% block entry-published %}
+        <time class="published" datetime="{{ object.creation_date|date:"c" }}" pubdate="pubdate">{{ object.creation_date|date:"DATE_FORMAT" }}</time>
+        {% endblock entry-published %}
+        {% block entry-categories %}
+        {% with categories=object.categories.all %}
+        {% if categories|length %}
+        {% trans "in" %}
+        {% for category in categories %}
+        <a href="{{ category.get_absolute_url }}"
+           title="{% blocktrans %}Show all entries in {{ category }}{% endblocktrans %}"
+           rel="tag category">{{ category }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}{% endif %}.
+        {% endwith %}
+        {% endblock entry-categories %}
+      </small>
+    </h2>
+    {% endblock entry-info %}
+    {% block entry-last-update %}
+    <p class="entry-last-update" style="display: none;">
+      {% trans "Last update on" %} <time class="updated" datetime="{{ object.last_update|date:"c" }}">{{ object.last_update|date:"DATE_FORMAT" }}</time>.
+    </p>
+    {% endblock entry-last-update %}
+  </header>
+  {% endblock entry-header %}
+
+     {% block entry-tags %}
+    <p class="entry-tags">
+      <span class="glyphicon glyphicon-tags"></span> {% trans "Tags" %} :
+      {% for tag in object.tags_list %}
+      <a href="{% url 'zinnia_tag_detail' tag %}"
+         title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
+         rel="tag">{{ tag }}</a>
+      {% empty %}
+      <span>{% trans "No tags" %}</span>
+      {% endfor %}
+    </p>
+    {% endblock entry-tags %}
+
+    {% block entry-comments %}
+      {% with comment_count=object.comment_count %}
+      {% if comment_count %}
+      <a href="{{ object.get_absolute_url }}#comments"
+         title="{% blocktrans with object=object.title %}Comments on {{ object }}{% endblocktrans %}">
+        {% blocktrans count comment_count=comment_count %}{{ comment_count }} comment{% plural %}{{ comment_count }} comments{% endblocktrans %}
+      </a>
+      {% else %}
+      {% if object.comments_are_open %}
+
+      {% else %}
+      {% trans "Comments are closed." %}
+      {% endif %}
+      {% endif %}
+      {% endwith %}
+      {% endblock entry-comments %}
+
+
+
+  {% block entry-body %}
+  <div class="entry-body">
+    {% block entry-image %}
+    {% if object.image %}
+    <div class="entry-image">
+      <p>
+        {% if continue_reading %}
+        <a href="{{ object.get_absolute_url }}" title="{{ object.title }}" rel="prettyPhoto" >
+          {% endif %}
+
+
+
+
+
+
+            {% if object.image|is_portrait %}
+                <div class="portrait">
+                {% thumbnail object.image "480x480" crop="center"  as im %}
+                        <img src="{{ im.url }}" class="img-thumbnail img-responsive">
+                 {% endthumbnail %}
+                 </div>
+                {% else %}
+                <div class="landscape">
+             {% thumbnail object.image "500" crop="bottom"  as im %}
+        <img src="{{ im.url }}" class="img-thumbnail img-responsive">
+    {% endthumbnail %}
+    </div>
+
+{% endif %}
+
+          {% if continue_reading %}
+        </a>
+        {% endif %}
+      </p>
+    </div>
+    {% endif %}
+    {% endblock entry-image %}
+    {% block entry-content %}
+    <div class="entry-content lead">
+      {{ object_content|safe }}
+    </div>
+    {% endblock entry-content %}
+    {% block continue-reading %}
+    {% if continue_reading and object_content.has_more %}
+    <p class="continue-reading" >
+
+          <a href="{{ object.get_absolute_url }}"
+             title="{% blocktrans with object=object.title %}Continue reading {{ object }}{% endblocktrans %}"
+             rel="bookmark" class="btn btn-xs"><i class="fa fa-sign-out fa-2x"></i>  {% trans "Continue reading" %}</a>
+
+    </p>
+    {% endif %}
+    {% endblock continue-reading %}
+  </div>
+  {% endblock entry-body %}
+
+
+
+</article>

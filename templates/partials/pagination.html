@@ -1,0 +1,14 @@
+{% load display_tags %}
+{% load i18n %}
+
+{% load bootstrap_pagination %}
+
+{% if paginator.num_pages > 1 %}
+
+
+	<div class="shopping-pagination">
+     {% bootstrap_paginate page_obj range=5 show_prev_next="false" show_first_last="true"%}
+    </div>
+
+
+{% endif %}

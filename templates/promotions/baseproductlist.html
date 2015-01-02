@@ -1,0 +1,24 @@
+{% load i18n %}
+{% load product_tags %}
+
+{% block content %}
+
+    <div class="sub-header">
+      <!--  <h2>{{ promotion.name }}</h2>-->
+    </div>
+
+    {{ promotion.description|safe }}
+        <div id="shop1">
+
+    <ul class="row" style="list-style: none;">
+        {% for product in products %}
+      <li class=" col-xs-6 col-sm-3 col-md-2 click{% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
+
+        {% endfor %}
+    </ul>
+
+    {% if block.link_url %}
+        <a href="{{ block.link_url }}">{% trans "See more" %}</a>
+    {% endif %}
+</div>
+{% endblock %}

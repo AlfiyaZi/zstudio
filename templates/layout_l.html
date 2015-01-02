@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+{% block layout %}
+
+
+{% block content_wrapper %}
+
+
+
+
+ <!-- Inner Content -->
+
+
+
+
+<!-- start portfolio -->
+
+      {# Div exists for AJAX updates to entire content section #}
+       {% block content %}{% endblock %}
+<!-- end portfolio -->
+
+
+
+      <!--end row-->
+
+
+
+
+
+
+
+ {% endblock %}
+
+<!-- Footer Start -->
+
+
+
+	<!-- Footer End -->
+
+
+
+{% endblock %}

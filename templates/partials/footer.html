@@ -1,0 +1,122 @@
+{% load i18n %}
+{% load staticfiles %}
+
+
+	<!-- Footer Start -->
+
+
+
+
+
+
+
+
+        <div class="footer padd">
+
+            {% block footer %}
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-sm-6">
+								<div class="footer-widget">
+
+
+								<!-- Heading -->
+								<h4>Способы оплаты </h4>
+
+
+
+
+
+
+
+    <p>банковской картой;</p>
+
+    <p>наличным расчетом курьеру.</p>
+
+						<!-- Heading -->
+								<h6></h6>
+								<!-- Images -->
+								<a href="index_new.html"><img class="payment img-responsive" src="{% static "flowers/img/payment/mastercard.gif" %}" alt="" /></a>
+								<a href="blog.html#"><img class="payment img-responsive" src="{% static "flowers/img/payment/paypal.gif"%}" alt="" /></a>
+								<a href="blog.html#"><img class="payment img-responsive" src="{% static "flowers/img/payment/visa.gif"%}"  alt="" /></a>
+								<a href="blog.html#"><img class="payment img-responsive" src="{% static "flowers/img/payment/worldpay.gif"%}" alt="" /></a>
+
+
+
+							</div>
+
+
+						</div>
+						<div class="col-md-3 col-sm-6">
+							<!-- Footer widget -->
+						<div class="footer-widget">
+							<div class="footer-widget">
+				 <h4>Информация</h4>
+
+								         <p style="color:#red !important;"><a href="/about/">Как сделать заказ?</a></p>
+                                         <p><a href="/about/delivery/">Доставка</a></p>
+
+							             <p><a href="#">Партнеры</a></p>
+
+							              <p><a href="#">Обратная связь</a></p>
+
+						</div>
+							</div>
+						</div>
+						<div class="clearfix visible-sm"></div>
+						<div class="col-md-3 col-sm-6">
+						<div class="footer-widget">
+
+							<!-- Heading -->
+								<h4>Новости</h4>
+								<!-- Paragraph -->
+
+								<!-- Subscribe form -->
+								<form role="form">
+									<div class="form-group">
+										<input class="form-control" type="text" placeholder="Ваше имя" />
+									</div>
+									<div class="form-group">
+										<input class="form-control" type="email" placeholder="e-mail" />
+									</div>
+									<button class="btn btn-primary" type="button">Подписаться</button>
+								</form>
+							</div> <!--/ Footer widget end -->
+
+
+
+						</div>
+<div class="col-md-3 col-sm-6">
+						<div class="footer-widget">
+
+							<!-- Heading -->
+								<h4>Контакты</h4>
+								<!-- Paragraph -->
+
+
+  <p> +7(342)212-75-99</p>
+<p> +8(982)481-68-62</p>
+  <p><a href="mailto:#">florgreen@bk.ru</a></p>
+							</div> <!--/ Footer widget end -->
+
+
+
+						</div>
+
+
+
+
+
+
+					</div>
+					<!-- Copyright -->
+					<div class="footer-copyright">
+						<!-- Paragraph -->
+							<p>&copy; Copyright 2014 <a href="/">Мастерская флористики Елены Захаровой</a></p>
+					</div>
+				</div>
+
+              {% endblock %}
+			</div>
+
+			<!-- Footer End -->

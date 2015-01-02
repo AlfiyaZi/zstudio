@@ -1,0 +1,44 @@
+{% load staticfiles %}
+{% extends "layout.html" %}
+
+<!DOCTYPE html>
+
+<html >
+<head>
+    <title>{% block title %}Blog{% endblock %}</title>
+    {% block extrahead %}{% endblock %}
+    <link rel="stylesheet"  type="text/css" media="screen" charset="utf-8"   href="{% static "dbe/css/blog.css" %}"/>
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+<div id="sidebar"> {% block sidebar %}{% endblock %} </div>
+
+    <div id="container">
+
+        <!-- MENU -->
+
+        <div id="menu">
+            {% block nav-global %}
+
+                <h3>MyBlog</h3>
+                {% if user.is_staff %}
+                    <a href="{% url 'admin:index' %}">Admin</a>
+                    <a href="{% url 'admin:blog_post_add' %}">Add post</a>
+                {% endif %}
+
+            {% endblock %}
+        </div>
+
+        <!-- CONTENT -->
+
+        <div class="row">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load staticfiles %}
+{% load url from future %}
+{% load currency_filters %}
+
+
+    <ul class="breadcrumb pull-right nav-accounts hidden-sm hidden-xs">
+        {% if user.is_authenticated %}
+            <li>
+                <a href="{% url "customer:summary" %}">{% trans "Account" %}</a>
+
+            </li>
+
+            {% if user.is_staff or perms.partner.dashboard_access %}
+            <li class="hidden-phone">
+                <a href="{% url "dashboard:index" %}">{% trans "Dashboard" %}</a>
+
+            </li>
+            {% endif %}
+            <li><a href="{% url "customer:logout" %}">{% trans "Logout" %}</a></li>
+        <li><a  href="{% url 'basket:summary' %}"><span class="glyphicon glyphicon-shopping-cart" data-toggle="tooltip"  title="Shopping Cart"></span> <span class="badge pull-right">
+ {% if request.basket.is_tax_known %}
+        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+    {% else %}
+        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+    {% endif %}
+
+        </span>&nbsp</a></li>
+        {% else %}
+          <li><a href="{% url "customer:login" %}">ВХОД</a></li>
+             <li><a  href="{% url 'basket:summary' %}"><span class="glyphicon glyphicon-shopping-cart" data-toggle="tooltip"  title="Shopping Cart"></span> <span class="badge pull-right">
+ {% if request.basket.is_tax_known %}
+        {{ request.basket.total_incl_tax|currency:request.basket.currency }}
+    {% else %}
+        {{ request.basket.total_excl_tax|currency:request.basket.currency }}
+    {% endif %}
+             </span>&nbsp</a></li>
+
+
+        {% endif %}
+
+
+
+     </ul>
+

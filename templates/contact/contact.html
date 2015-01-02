@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+        {% load thumbnail %}
+
+  {% block content %}
+<form action="/contact/" method="post">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+
+        {% endblock %}

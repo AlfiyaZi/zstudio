@@ -1,0 +1,123 @@
+{% extends "layout_right.html" %}
+{% load zinnia_tags i18n %}
+
+{% block sidebar %}
+
+
+
+
+
+        <!-- blog search -->
+							<div class="widget">
+
+								<h3>{% trans "Search" %}</h3>
+
+								<form method="get" action="{% url 'zinnia_entry_search' %}" class="input-group">
+									<input type="text" class="form-control"  name="pattern" placeholder="{% trans "Keywords..." %}" {% if pattern %}value="{{ pattern }}"{% endif %} />
+									<span class="input-group-btn">
+										<button class="btn btn-primary"><i class="fa fa-search"></i></button>
+									</span>
+								</form>
+
+
+
+							</div>
+
+
+        <aside id="widget-categories" class="widget panel panel-default">
+  <div class="panel-heading">
+    {% trans "Categories" %}
+  </div>
+  {% get_categories %}
+</aside>
+
+
+
+
+
+<aside id="widget-authors" class="widget panel panel-default">
+  <div class="panel-heading">
+    {% trans "Authors" %}
+  </div>
+  {% get_authors %}
+</aside>
+<aside id="widget-recents"   class="widget panel panel-default">
+  <div class="panel-heading">
+    {% trans "Recent entries" %}
+  </div>
+
+  {% get_recent_entries %}
+</aside>
+
+
+
+   <aside>
+
+       <div id="widget-tags" class="widget">
+  <h3>{% trans "Tags" %}</h3>
+  {% get_tag_cloud %}
+</div>
+   </aside>
+
+
+
+<aside id="widget-populars" class="widget panel panel-default">
+  <div id="widget-archives" class="widget">
+  <h3>{% trans "Archives" %}</h3>
+  {% get_archives_entries_tree %}
+</div>
+</aside>
+  <aside>
+           <div class="links">
+            <h3>{% trans "Useful links" %}</h3>
+            <ul>
+              <li>
+                <a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Weblog index" %}">
+                  {% trans "Weblog index" %}
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+                  {% trans "Sitemap" %}
+                </a>
+              </li>
+            </ul>
+          </div>
+
+  </aside>
+
+
+{% if user.is_authenticated %}
+<aside id="widget-tools" class="widget panel panel-danger">
+  <div class="panel-heading">
+    {% trans "Tools" %}
+  </div>
+  <ul class="list-group">
+    {% if perms.zinnia %}
+    <li class="list-group-item">
+      <a href="{% url 'admin:app_list' 'zinnia' %}" title="{% trans "Dashboard" %}">
+        <span class="glyphicon glyphicon-book"></span>
+        {% trans "Dashboard" %}
+      </a>
+    </li>
+    {% endif %}
+    {% if perms.zinnia.add_entry %}
+    <li class="list-group-item">
+      <a href="{% url 'admin:zinnia_entry_add' %}" title="{% trans "Post an entry" %}">
+        <span class="glyphicon glyphicon-pencil"></span>
+        {% trans "Post an entry" %}
+      </a>
+    </li>
+    {% endif %}
+    {% block admin-tools %}
+    {% endblock admin-tools %}
+    <li class="list-group-item">
+      <a href="{% url 'admin:logout' %}" title="{% trans "Log out" %}">
+        <span class="glyphicon glyphicon-off"></span>
+        {% trans "Log out" %}
+      </a>
+    </li>
+  </ul>
+</aside>
+{% endif %}
+{% endblock sidebar %}

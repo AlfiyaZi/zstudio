@@ -1,0 +1,218 @@
+
+.mac-style {
+    width: 100px;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition:width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+ }
+
+.mac-style:focus{
+    width: 260px;
+}
+
+
+
+
+
+.navigation{
+margin-left:15px;
+	margin-right:15px;
+}
+
+		/* Portfolio */
+.portfolio {
+	margin-top: 20px;
+}
+.portfolio .col-md-3{
+
+	margin-right: 0;
+	margin-left: 0;
+}
+.portfolio > figure {
+	position: relative;
+	overflow: hidden;
+}
+.portfolio > figure img {
+	max-width: 100%;
+	display: block;
+
+}
+.portfolio figcaption {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	left: 0;
+	top: 0;
+
+	background-color: rgba(58,63,67,.8);
+	padding: 10%;
+
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+
+	-webkit-transition: all 350ms;
+	-moz-transition: all 350ms;
+	-o-transition: all 350ms;
+	transition: all 350ms;
+}
+.portfolio figcaption h4 {
+	color: #ffffff;
+}
+
+.portfolio figcaption h4 a {
+	color: #ffffff;
+}
+
+
+.portfolio figcaption h4 a:hover,a:focus{
+	color:red;
+
+}
+
+
+
+.portfolio figcaption p {
+	font-size: 0.929em;
+	color: #fff;
+}
+.portfolio > figure:hover figcaption {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+/* Navgation */
+.nav-menu,
+.portfolio > figure.col-md-3 {
+	display: none;
+
+}
+
+
+label {
+	padding: 5px 10px;
+	color: #3a3f43;
+	margin-left: 12px;
+	cursor: pointer;
+	display: inline-block;
+}
+.nav-menu:checked + label {
+	color: #fff;
+	background-color: #eb2029;
+	border-radius: 3px;
+}
+#all:checked ~ .portfolio .all,
+#posters:checked ~ .portfolio .poster,
+#illustrations:checked ~ .portfolio .illustration,
+#buckets:checked ~ .portfolio .bucket,
+			#compositions:checked ~ .portfolio .compose,
+			#paints:checked ~ .portfolio .paint,
+			#basckets:checked ~ .portfolio .basket,
+			#potted:checked ~ .portfolio .pot,
+			#cards:checked ~ .portfolio .card,
+			#svadbas:checked ~ .portfolio .svadba,
+			#jwels:checked ~ .portfolio .jwel,
+			#seasons:checked ~ .portfolio .season,
+
+
+#typography:checked ~ .portfolio .typography,
+#packaging:checked ~ .portfolio .package {
+	display: block;
+}
+
+
+		/* article */
+. article {
+	margin-top: 20px;
+}
+.article .col-md-3{
+
+	margin-right: 0;
+	margin-left: 0;
+}
+.article > figure {
+	position: relative;
+	overflow: hidden;
+}
+.article > figure img {
+	max-width: 100%;
+	display: block;
+}
+.article figcaption {
+	position: absolute;
+
+	width: 100%;
+	height: 100%;
+
+	left: 0;
+	top: 0;
+
+	background-color: rgba(58,63,67,.8);
+	padding: 10%;
+
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+
+	-webkit-transition: all 350ms;
+	-moz-transition: all 350ms;
+	-o-transition: all 350ms;
+	transition: all 350ms;
+}
+.article figcaption h4 {
+	color: #fff;
+}
+.article figcaption p {
+	font-size: 0.929em;
+	color: #fff;
+}
+.article > figure:hover figcaption {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+/* Navgation */
+.nav-menu,
+.portfolio > figure.col-md-3 {
+	display: none;
+
+}
+
+
+
+.nav-menu:checked + label {
+	color: #fff;
+	background-color: #eb2029;
+	border-radius: 3px;
+}
+#all:checked ~ .portfolio .all,
+#posters:checked ~ .portfolio .poster,
+#illustrations:checked ~ .portfolio .illustration,
+#buckets:checked ~ .portfolio .bucket,
+			#compositions:checked ~ .portfolio .compose,
+			#paints:checked ~ .portfolio .paint,
+			#basckets:checked ~ .portfolio .basket,
+			#potted:checked ~ .portfolio .pot,
+			#cards:checked ~ .portfolio .card,
+			#svadbas:checked ~ .portfolio .svadba,
+			#jwels:checked ~ .portfolio .jwel,
+			#seasons:checked ~ .portfolio .season,
+
+
+#typography:checked ~ .portfolio .typography,
+#packaging:checked ~ .portfolio .package {
+	display: block;
+}
+
+

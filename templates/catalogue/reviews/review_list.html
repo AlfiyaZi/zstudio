@@ -1,0 +1,42 @@
+{% extends "layout_catalogue.html" %}
+
+{% load url from future %}
+{% load history_tags %}
+{% load i18n %}
+
+{% block title %}
+    {% trans "All reviews" %} | {{ product.title }} | {{ block.super }}
+{% endblock %}
+
+
+
+{% block headertext %}
+    {% trans "Customer reviews" %}
+{% endblock  %}
+
+{% block content %}
+
+    <section>        
+        {% include 'catalogue/reviews/review_product.html' %}
+
+        {% if reviews %}
+            <h4>{% trans "Sort by:" %}</h4>
+            <form action="." method="get" class="form-inline">
+                <select name="sort_by">
+                    <option value="score">{% trans "Score" %}</option>
+                    <option value="recency">{% trans "Recency" %}</option>
+                </select>
+                <input type="submit" class="btn" value="{% trans "Go" %}" />
+            </form>
+
+            {% for review in reviews %}
+                {% include 'catalogue/partials/review.html' %}
+            {% endfor %}
+            {% include 'partials/pagination.html' %}
+
+        {% else %}
+            <p>{% trans "This product does not have any reviews yet." %}</p>
+        {% endif %}
+
+    </section>
+{% endblock %}

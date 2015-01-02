@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% load i18n staticfiles %}
+{% load zinnia_tags i18n %}
+
+{% load promotion_tags %}
+
+
+
+
+
+
+{% block content_wrapper %}
+
+
+ <div class="container">
+        <div class="page-inner">
+
+
+            <div class="container">
+						<!-- Default Heading -->
+						<div class="default-heading">
+
+
+
+
+						</div>
+
+					</div>
+
+
+
+
+
+
+      <div class="row">
+        <div id="content" class="hfeed col-xs-12 col-sm-8 col-md-8 col-lg-8">
+          {% block breadcrumbs %}
+          {% zinnia_breadcrumbs %}
+
+            {% endblock %}
+
+
+             {% block subnavigation %}
+
+
+            {% endblock %}
+
+          {% block content %}
+
+
+
+          {% endblock content %}
+        </div>
+        <div id="sidebar" class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          {% block sidebar %}
+
+          {% endblock sidebar %}
+        </div>
+      </div>
+
+    </div><!-- /page_inner -->
+</div><!-- /container-->
+
+{% endblock %}
+

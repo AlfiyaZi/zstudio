@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+{% block layout %}
+
+
+
+			<!-- Header Start -->
+
+		<!-- Header Start -->
+<div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Project name</h3>
+      </div>
+
+
+<div class="wrapper">
+{% block content_wrapper %}
+
+
+
+
+
+ <!-- Inner Content -->
+	<div class="inner-page padd">
+	<!-- Shopping Start -->
+
+	<div class="shopping">
+		<div class="container">
+
+
+<!-- end navigation -->
+  <div class="page_inner">
+
+  {% block breadcrumbs %}{% endblock %}
+       {% block header %}
+
+
+                       {% block headertext %}{% endblock %}
+
+                {% endblock %}
+
+                {% block subnavigation %}{% endblock %}
+                <div class="content">
+                    {% block subheader %}{% endblock subheader %}
+
+                    {# Render promotions #}
+                    <div id="promotions">
+                        {% for promotion in promotions_page %}
+                            {% render_promotion promotion %}
+                        {% endfor %}
+                    </div>
+
+<!-- start portfolio -->
+
+      {# Div exists for AJAX updates to entire content section #}
+       {% block content %}{% endblock %}
+<!-- end portfolio -->
+
+
+
+      <!--end row-->
+
+                   </div>
+
+</div>
+				</div><!--end  container-->
+              </div>
+
+			</div><!-- /Inner page pad -->
+
+
+ {% endblock %}
+
+<!-- Footer Start -->
+
+
+{% include "partials/footer.html" %}
+
+	<!-- Footer End -->
+
+
+		 </div><!-- / Wrapper End -->
+		<!-- Scroll to top -->
+		<span class="totop"><a href="index.html#"><i class="fa fa-angle-up"></i></a></span>
+
+{% endblock %}

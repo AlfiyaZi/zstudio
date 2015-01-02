@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% load staticfiles %}
+{% load compress %}
+{% load promotion_tags %}
+
+
+  {% block content %}
+
+    <div class="container">
+
+        <form class="col-md-6"  method="post" action="/express/express/">{% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input class="btn btn-primary" type="submit" name="submit"/>
+
+        </form>
+
+    </div>
+
+{% endblock %}

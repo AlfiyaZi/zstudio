@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+     {% load url from future %}
+
+{% load i18n %}
+{% load product_tags %}
+{% load form_tags %}
+{% load widget_tweaks %}
+
+{% load staticfiles %}
+
+
+
+{% block content %}
+    <form action="{{ form.target }}" method="POST">
+         {% for hidden in form.hidden_fields %}
+            {{ hidden }}
+            {% endfor %}
+
+            {% for field in form.visible_fields %}
+            {{ field.errors }}
+            <p>
+            {{ field.help_text }}</p>
+            {{ field |add_class:"form-control"  }}<br/>
+            {% endfor %}
+        <p><input type="submit" value="Купить"></p>
+    </form>
+{% endblock %}

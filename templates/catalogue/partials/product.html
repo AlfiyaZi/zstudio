@@ -35,8 +35,8 @@
                                      {% endif %}
 
                                        {% with image=product.primary_image %}
-                                {% thumbnail image.original  "280x280" crop="center" as thumb %}
-                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}" class="img-thumbnail" width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
+                                {% thumbnail image.original  "480x480" crop="center" as thumb %}
+                                    <a href="{{ product.get_absolute_url }}"><img   src="{{ thumb.url }}"  width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.get_title }}"  ></a>
                                     {% endthumbnail %}
 
                                 {% endwith %}

@@ -91,7 +91,7 @@ INSTALLED_APPS = [
                      'portfolio',
 
                      'pay',
-                     #'zinnia',
+                     'zinnia',
                      'tagging',
                      'feincms',
 
@@ -469,7 +469,8 @@ from oscar.defaults import *
 
 # Address settings
 
-OSCAR_REQUIRED_ADDRESS_FIELDS = ('')
+# Address settings
+OSCAR_REQUIRED_ADDRESS_FIELDS = ('first_name')
 OSCAR_SHOP_NAME = u'Студия флористики Елены Захаровой'
 OSCAR_SHOP_TAGLINE = u'доставка букетов'
 OSCAR_DEFAULT_CURRENCY = u'руб.'
@@ -479,7 +480,7 @@ OSCAR_CURRENCY_FORMAT = u'#,##0.00 ¤'
 OSCAR_RECENTLY_VIEWED_PRODUCTS = 20
 OSCAR_ALLOW_ANON_CHECKOUT = True
 OSCAR_ALLOW_ANON_REVIEWS = True
-OSCAR_MODERATE_REVIEWS = True
+OSCAR_MODERATE_REVIEWS = False
 # Registration
 OSCAR_SEND_REGISTRATION_EMAIL = True
 OSCAR_FROM_EMAIL = 'florgreen@bk.ru'

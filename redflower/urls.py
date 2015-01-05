@@ -50,6 +50,8 @@ urlpatterns = patterns('',
     # Robokassa integration...
     (r'^checkout/robokassa/', include('robokassa.urls')),
 
+    url(r'^blog/', include('zinnia.urls')),
+
     url(r'^about/', include('about.urls')),
 
     url(r'^events/', include('events.urls')),

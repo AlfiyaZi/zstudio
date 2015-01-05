@@ -69,6 +69,9 @@ class PaymentMethodView(corePaymentMethodView):
 
         # Save the choosen method
         self.checkout_session.pay_by(SourceType.objects.get(code=method_code))
+        import smsru
+        cli = smsru.Client()
+        cli.send("+79526646699", u'ntc')
 
         return self.get_success_response()
 
@@ -117,6 +120,11 @@ class PaymentDetailsView(corePaymentDetailsView):
                 email = self.request.user.email if \
                         self.request.user.is_authenticated() else \
                         self.checkout_session.get_guest_email()
+
+                import smsru
+                cli = smsru.Client()
+                cli.send("+79526646699", u'email')
+
                 robokassa_redirect(self.request, basket_num, total.incl_tax, 
                         Email=email, Culture='ru', order_num=order_number)
             raise UnableToTakePayment(u"Данный вид платежа не поддерживается")

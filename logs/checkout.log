@@ -350,3 +350,55 @@ INFO 2015-01-02 23:06:07,224 views Order #100021: beginning submission process f
 INFO 2015-01-02 23:06:07,381 views Order #100021: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=558.00&InvId=21&SignatureValue=D014FC54EF1EB2BA012A2459B7E0ABF1&Email=alfiya%40gmail.com&Culture=ru
 INFO 2015-01-03 01:55:18,789 views Order #100024: beginning submission process for basket #24
 INFO 2015-01-03 01:55:18,923 views Order #100024: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=634.00&InvId=24&SignatureValue=A1A26051DFC97F5AD1DD1E246764A08D&Email=alfiyaZiganshina%40gmail.com&Culture=ru
+INFO 2015-01-03 22:10:26,503 views Order #100022: beginning submission process for basket #22
+INFO 2015-01-03 22:10:26,568 views Order #100022: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=68.00&InvId=22&SignatureValue=57043A4FB4DD3224921C291F92FEA783&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 22:30:47,994 views Order #100027: beginning submission process for basket #27
+INFO 2015-01-03 22:30:48,288 views Order #100027: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=27&SignatureValue=56CC23C4DDB9BD1D4ABD51D281EF9BE1&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 22:37:01,240 views Order #100028: beginning submission process for basket #28
+ERROR 2015-01-03 22:37:01,260 views Order #100028: unhandled exception while taking payment (unsupported operand type(s) for +: 'Decimal' and 'unicode')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 125, in handle_payment
+    mes=total.incl_tax+email+order_number
+TypeError: unsupported operand type(s) for +: 'Decimal' and 'unicode'
+INFO 2015-01-03 22:37:06,026 views Order #100028: beginning submission process for basket #28
+ERROR 2015-01-03 22:37:06,045 views Order #100028: unhandled exception while taking payment (unsupported operand type(s) for +: 'Decimal' and 'unicode')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 125, in handle_payment
+    mes=total.incl_tax+email+order_number
+TypeError: unsupported operand type(s) for +: 'Decimal' and 'unicode'
+INFO 2015-01-03 22:37:48,279 views Order #100028: beginning submission process for basket #28
+INFO 2015-01-03 22:37:48,358 views Order #100028: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=28&SignatureValue=2DED9C9EC2B3F823830A2E8A45BE281C&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 22:40:29,602 views Order #100029: beginning submission process for basket #29
+INFO 2015-01-03 22:40:29,801 views Order #100029: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=29&SignatureValue=792EAFE5BEE83F9A5BFC6BFBF514D85B&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 23:11:50,618 views Order #100030: beginning submission process for basket #30
+INFO 2015-01-03 23:11:50,809 views Order #100030: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=30&SignatureValue=8944DE1081FA5097DF4B1C7C0C237FF3&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 23:20:55,177 views Order #100032: beginning submission process for basket #32
+INFO 2015-01-03 23:20:55,437 views Order #100032: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=32&SignatureValue=0BE81004D7A0D87D2AB5A8B0ACFD783E&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-03 23:34:30,773 views Order #100034: beginning submission process for basket #34
+ERROR 2015-01-03 23:34:30,793 views Order #100034: unhandled exception while taking payment (message must be a unicode)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 126, in handle_payment
+    cli.send("+79526646699", 'email')
+  File "c:\DJango\redflower\redflower\apps\checkout\smsru.py", line 156, in send
+    raise ValueError("message must be a unicode")
+ValueError: message must be a unicode
+INFO 2015-01-03 23:34:37,713 views Order #100034: beginning submission process for basket #34
+ERROR 2015-01-03 23:34:37,732 views Order #100034: unhandled exception while taking payment (message must be a unicode)
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 126, in handle_payment
+    cli.send("+79526646699", 'email')
+  File "c:\DJango\redflower\redflower\apps\checkout\smsru.py", line 156, in send
+    raise ValueError("message must be a unicode")
+ValueError: message must be a unicode
+INFO 2015-01-03 23:37:43,282 views Order #100034: beginning submission process for basket #34
+INFO 2015-01-03 23:37:43,595 views Order #100034: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=34&SignatureValue=0164E412D9D674EC01EAA7B4C58B0AE4&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-04 00:22:50,109 views Order #100036: beginning submission process for basket #36
+INFO 2015-01-04 00:22:50,408 views Order #100036: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=36&SignatureValue=89696DDB5277E7609E799103E3DC0678&Email=silvera%40mail.ru&Culture=ru

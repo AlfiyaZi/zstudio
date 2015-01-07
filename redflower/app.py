@@ -7,11 +7,11 @@ from apps.invoice.app import application as invoice_app
 
 
 
-
 class Main(Shop):
     # Use local checkout app so we can mess with the view classes
     checkout_app = checkout_app
     invoice_app = invoice_app
+
 
     def get_urls(self):
         urlpatterns = super(Main, self).get_urls()

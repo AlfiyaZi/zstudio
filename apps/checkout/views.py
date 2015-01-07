@@ -69,9 +69,7 @@ class PaymentMethodView(corePaymentMethodView):
 
         # Save the choosen method
         self.checkout_session.pay_by(SourceType.objects.get(code=method_code))
-        import smsru
-        cli = smsru.Client()
-        cli.send("+79526646699", u'ntc')
+
 
         return self.get_success_response()
 
@@ -133,14 +131,14 @@ class PaymentDetailsView(corePaymentDetailsView):
         # Request was successful - record the "payment source".  As this
         # request was a 'pre-auth', we set the 'amount_allocated' - if we had
         # performed an 'auth' request, then we would set 'amount_debited'.
+        source_type, _ = SourceType.objects.get_or_create(name='robokassa')
         source = Source(source_type=source_type,
                         amount_allocated=total.incl_tax,
-                        reference='') # PA: reference could be No of invoice?
+                        reference=order_number) # PA: reference could be No of invoice?
         self.add_payment_source(source)
 
         # Also record payment event
-        self.add_payment_event(
-            'pre-auth', total.incl_tax, reference='')
+        self.add_payment_event('pre-auth', total.incl_tax)
 
 
 class ThankYouView(coreThankYouView):
@@ -172,7 +170,7 @@ class ThankYouView(coreThankYouView):
         order = ctx.get("order", None)
         if order:
             payment_method = order.sources.all()[0].source_type
-            if payment_method.code in ('sbrf_slip', 'invoice_payment'):
+            if payment_method.code in ('invoice_payment'):
                 ctx['print_invoice'] = True
                 ctx['payment_method_code'] = payment_method.code
         return ctx

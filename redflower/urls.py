@@ -51,6 +51,7 @@ urlpatterns = patterns('',
     (r'^checkout/robokassa/', include('robokassa.urls')),
 
     url(r'^blog/', include('zinnia.urls')),
+    url(r'^comments/', include('django.contrib.comments.urls')),
 
     url(r'^about/', include('about.urls')),
 

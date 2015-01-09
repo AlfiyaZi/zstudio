@@ -25,6 +25,9 @@ def send_advice_message(sender, **kwargs):
     ctx = {'user': user,
             'order': order,
             'lines': order.lines.all()}
+
+
+
     try:
         event_type = CommunicationEventType.objects.get(code=code)
     except CommunicationEventType.DoesNotExist:

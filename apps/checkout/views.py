@@ -101,6 +101,10 @@ class PaymentDetailsView(corePaymentDetailsView):
         ctx.update(kwargs)
         return ctx
 
+
+
+
+
     def handle_payment(self, order_number, total, **kwargs):
         source_type = self.checkout_session.payment_method()
         log.debug("=" * 80)
@@ -120,8 +124,20 @@ class PaymentDetailsView(corePaymentDetailsView):
                         self.checkout_session.get_guest_email()
 
                 import smsru
+
+
+
+
+
+
+
+                us=unicode(email)+''+unicode(u"номер корзины")+unicode(basket_num)
+
+
+
+
                 cli = smsru.Client()
-                cli.send("+79526646699", u'email')
+                cli.send("+79526646699", us)
 
                 robokassa_redirect(self.request, basket_num, total.incl_tax, 
                         Email=email, Culture='ru', order_num=order_number)

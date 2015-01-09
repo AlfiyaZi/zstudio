@@ -410,3 +410,89 @@ INFO 2015-01-07 09:56:20,960 views Order #100035: beginning submission process f
 INFO 2015-01-07 09:56:21,493 views Order #100035: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=459.00&InvId=35&SignatureValue=4145FD4906A0091D9D9E2953BFF7D46A&Email=alfiya%40gmail.com&Culture=ru
 INFO 2015-01-07 20:04:27,299 views Order #100044: beginning submission process for basket #44
 INFO 2015-01-07 20:04:28,081 views Order #100044: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=490.00&InvId=44&SignatureValue=DC414AB20C155E702FDA249E087517F1&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-07 20:45:38,559 views Order #100045: beginning submission process for basket #45
+INFO 2015-01-07 20:45:38,900 views Order #100045: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=600.00&InvId=45&SignatureValue=DC820C0037D68E2880F372A5CAC02528&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-09 05:11:48,378 views Order #100046: beginning submission process for basket #46
+ERROR 2015-01-09 05:11:48,542 views Order #100046: unhandled exception while taking payment ('NoneType' object has no attribute 'append')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 129, in handle_payment
+    s=s.append(email)
+AttributeError: 'NoneType' object has no attribute 'append'
+INFO 2015-01-09 05:11:54,539 views Order #100046: beginning submission process for basket #46
+ERROR 2015-01-09 05:11:54,559 views Order #100046: unhandled exception while taking payment ('NoneType' object has no attribute 'append')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 129, in handle_payment
+    s=s.append(email)
+AttributeError: 'NoneType' object has no attribute 'append'
+INFO 2015-01-09 05:11:54,967 views Order #100046: beginning submission process for basket #46
+ERROR 2015-01-09 05:11:55,121 views Order #100046: unhandled exception while taking payment ('NoneType' object has no attribute 'append')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 129, in handle_payment
+    s=s.append(email)
+AttributeError: 'NoneType' object has no attribute 'append'
+INFO 2015-01-09 05:20:20,599 views Order #100046: beginning submission process for basket #46
+ERROR 2015-01-09 05:20:20,634 views Order #100046: unhandled exception while taking payment ('int' object has no attribute 'append')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 129, in handle_payment
+    s=s.append(email)
+AttributeError: 'int' object has no attribute 'append'
+INFO 2015-01-09 05:24:32,154 views Order #100046: beginning submission process for basket #46
+INFO 2015-01-09 05:24:32,450 views Order #100046: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=34.00&InvId=46&SignatureValue=6E914279C8F87CDDA32C3B57770EC14D&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-09 05:27:14,463 views Order #100047: beginning submission process for basket #47
+INFO 2015-01-09 05:27:14,709 views Order #100047: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=3.00&InvId=47&SignatureValue=E36901C68E1969A5E693DEF61DB229DC&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-09 05:30:42,355 views Order #100048: beginning submission process for basket #48
+ERROR 2015-01-09 05:30:42,397 views Order #100048: unhandled exception while taking payment ('ascii' codec can't decode byte 0xd0 in position 0: ordinal not in range(128))
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 131, in handle_payment
+    us=unicode(email)+''+unicode("номер корзины")+unicode(basket_num)
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xd0 in position 0: ordinal not in range(128)
+INFO 2015-01-09 05:31:15,512 views Order #100048: beginning submission process for basket #48
+INFO 2015-01-09 05:31:15,766 views Order #100048: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=30.00&InvId=48&SignatureValue=7B18D9E4B30A7D88F0B3A564F6753D45&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-09 05:46:01,898 views Order #100049: beginning submission process for basket #49
+ERROR 2015-01-09 05:46:01,921 views Order #100049: unhandled exception while taking payment ('order')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 127, in handle_payment
+    order = kwargs['order']
+KeyError: 'order'
+INFO 2015-01-09 05:47:31,591 views Order #100049: beginning submission process for basket #49
+ERROR 2015-01-09 05:47:31,612 views Order #100049: unhandled exception while taking payment ('order')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 127, in handle_payment
+    order = kwargs['order']
+KeyError: 'order'
+INFO 2015-01-09 05:48:25,946 views Order #100049: beginning submission process for basket #49
+ERROR 2015-01-09 05:48:26,096 views Order #100049: unhandled exception while taking payment ('user')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 128, in handle_payment
+    user = kwargs['user']
+KeyError: 'user'
+INFO 2015-01-09 05:50:02,398 views Order #100049: beginning submission process for basket #49
+INFO 2015-01-09 05:50:02,730 views Order #100049: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=30.00&InvId=49&SignatureValue=A373A4633EB4E6B6C47386EC111E6EB4&Email=alfiya%40gmail.com&Culture=ru
+INFO 2015-01-09 05:56:25,038 views Order #100050: beginning submission process for basket #50
+ERROR 2015-01-09 05:56:25,062 views Order #100050: unhandled exception while taking payment ('Author' object has no attribute 'name')
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\oscar\apps\checkout\views.py", line 565, in submit
+    self.handle_payment(order_number, order_total, **payment_kwargs)
+  File "c:\DJango\redflower\redflower\apps\checkout\views.py", line 128, in handle_payment
+    user = self.request.user.name
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 205, in inner
+    return func(self._wrapped, *args)
+AttributeError: 'Author' object has no attribute 'name'
+INFO 2015-01-09 05:57:07,361 views Order #100050: beginning submission process for basket #50
+INFO 2015-01-09 05:57:07,700 views Order #100050: redirecting to https://merchant.roboxchange.com/Index.aspx?MrchLogin=flowerBigCity&OutSum=30.00&InvId=50&SignatureValue=D2A8946924357E92874672DBE83B7387&Email=alfiya%40gmail.com&Culture=ru

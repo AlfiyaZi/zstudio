@@ -11,7 +11,7 @@ PASSWORD2 = getattr(settings, 'ROBOKASSA_PASSWORD2', None)
 USE_POST = getattr(settings, 'ROBOKASSA_USE_POST', True)
 
 # требовать предварительного уведомления на ResultURL
-STRICT_CHECK = getattr(settings, 'ROBOKASSA_STRICT_CHECK', True)
+STRICT_CHECK = getattr(settings, 'ROBOKASSA_STRICT_CHECK', False)
 
 # тестовый режим
 TEST_MODE = getattr(settings, 'ROBOKASSA_TEST_MODE', False)

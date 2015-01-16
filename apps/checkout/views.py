@@ -11,7 +11,7 @@ from django.db.models import get_model
 from oscar.core.loading import get_class, get_classes
 from oscar.core.compat import get_user_model
 
-
+from django.template import RequestContext
 from oscar.apps.checkout.views import PaymentMethodView as corePaymentMethodView
 from oscar.apps.checkout.views import PaymentDetailsView as corePaymentDetailsView
 from oscar.apps.checkout.views import ThankYouView as coreThankYouView

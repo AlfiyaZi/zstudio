@@ -80,7 +80,7 @@ pyparsing==2.0.2
 python-dateutil==2.2
 pytz==2014.4
 redis==2.10.1
-requests==1.2.0
+requests==2.20.0
 
 sentry-sms-ru==0.0.3
 six==1.7.2

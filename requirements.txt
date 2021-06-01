@@ -88,7 +88,7 @@ sorl-thumbnail==11.12
 sqlparse==0.1.11
 stevedore==0.15
 surlex==0.2.0
-urllib3==1.8.2
+urllib3==1.26.5
 
 
 

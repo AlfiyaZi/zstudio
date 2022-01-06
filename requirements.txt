@@ -14,7 +14,7 @@ argparse==1.2.1
 beautifulsoup4==4.3.2
 billiard==2.7.3.34
 bottle==0.11.6
-celery==3.0.24
+celery==5.2.2
 cmsplugin-filer==0.9.5
 coverage==3.7.1
 coveralls==0.4.2
